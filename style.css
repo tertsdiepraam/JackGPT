@@ -1,0 +1,107 @@
+html {
+    font-size: 1.1em;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title {
+    font-weight: bold;
+    color: grey;
+    padding: 1em;
+    font-size: 1.1em;
+    align-self: center;
+}
+
+#content {
+    height: 100%;
+    width: 84ch;
+    display: flex;
+    flex-direction: column;
+}
+
+#messages {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding: 0 1em;
+}
+
+.message {
+    margin-bottom: 0.3em;
+}
+
+.message.human {
+    max-width: 60ch;
+    align-self: end;
+    background: #f3f3f3;
+    padding: 0em 1em;
+    border-radius: 2em;
+}
+
+#bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#prompt-box {
+    align-self: stretch;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.5em 1em;
+    border-radius: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    box-shadow: 0 9px 9px 0px rgba(0,0,0,.01),0 2px 5px 0px rgba(0,0,0,.06);
+}
+
+#prompt:focus {
+    outline: none;
+}
+
+#prompt {
+    flex: 2;
+    width: 100%;
+    font-size: 1em;
+    border: none;
+    margin: 0em;
+}
+
+#disclaimer {
+    font-size: 0.7em;
+    color: grey;
+}
+
+#disclaimer a {
+    color: grey;
+}
+
+#send {
+    aspect-ratio: 1;
+    color: white;
+    background: black;
+    border: none;
+    border-radius: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#send > svg {
+    height: 100%;
+    width: 100%;
+}
