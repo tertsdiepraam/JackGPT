@@ -15,6 +15,10 @@ body {
     align-items: center;
 }
 
+* {
+    scrollbar-color: transparent transparent;
+}
+
 #title {
     font-weight: bold;
     color: grey;
