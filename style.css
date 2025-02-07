@@ -6,7 +6,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: sans-serif;
+    font-family: ui-sans-serif,-apple-system,system-ui,Segoe UI,Helvetica,Apple Color Emoji,Arial,sans-serif,Segoe UI Emoji,Segoe UI Symbol;
 }
 
 body {
@@ -26,16 +26,43 @@ body {
 #content {
     height: 100%;
     width: 84ch;
+    max-width: calc(100% - 2em);
     display: flex;
     flex-direction: column;
+    align-items: space-between;
+}
+
+#main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #messages {
+    width: 100%;
     display: flex;
     flex: 2;
     flex-direction: column;
     overflow-y: scroll;
     padding: 0 1em;
+}
+
+#messages:empty {
+    flex: 0 0 auto;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+#messages:empty:before {
+    content: "Ik weet alles. Wat moet je van me?";
+    justify-self: center;
+    align-self: center;
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
 }
 
 .message {
@@ -48,13 +75,6 @@ body {
     background: #f3f3f3;
     padding: 0em 1em;
     border-radius: 2em;
-}
-
-#bottom {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
 }
 
 #prompt-box {
@@ -83,6 +103,7 @@ body {
 #disclaimer {
     font-size: 0.7em;
     color: grey;
+    text-align: center;
 }
 
 #disclaimer a {

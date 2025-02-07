@@ -16,11 +16,12 @@ fetch("./answers.txt").then((r) => r.text()).then((r) => {
     responses = lines;
     ready_for_input = true;
 
-    add_message("bot", introduction);
+    // add_message("bot", introduction);
 })
 
 const reveal_text = (element, str, idx) => {
     element.innerText = str.substring(0, idx + 1);
+    messages.scrollTo(0, messages.scrollHeight);
     let delay;
     const c = str.charAt(idx);
     if (c === "." || c === "!" || c === "?") {
