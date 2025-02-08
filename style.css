@@ -5,7 +5,7 @@ html {
 html, body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: 100dvh;
     font-family: ui-sans-serif,-apple-system,system-ui,Segoe UI,Helvetica,Apple Color Emoji,Arial,sans-serif,Segoe UI Emoji,Segoe UI Symbol;
 }
 
@@ -28,9 +28,9 @@ body {
 }
 
 #content {
-    height: 100vh;
+    height: 100dvh;
     width: 84ch;
-    max-width: calc(100% - 2em);
+    max-width: calc(100% - 1em);
     display: flex;
     flex-direction: column;
 }
