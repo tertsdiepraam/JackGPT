@@ -9,14 +9,13 @@ let introduction = "";
 let responses = [];
 let ready_for_input = false;
 let rest_of_response = "";
+let queued_responses = [];
 
 fetch("./answers.txt").then((r) => r.text()).then((r) => {
     const lines = r.split("\n\n");
     introduction = lines.shift();
     responses = lines;
     ready_for_input = true;
-
-    // add_message("bot", introduction);
 })
 
 const reveal_text = (element, str, idx) => {
@@ -61,12 +60,19 @@ const add_message = (cls, msg) => {
     messages.scrollTo(0, messages.scrollHeight);
 }
 
-const random_element = (array) => {
-    return array[Math.floor(Math.random() * array.length)]
-}
+const shuffle = (array) => {
+    for (let i = array.length - 1; i >= 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+};
 
 const respond = () => {
-    let response = random_element(responses);
+    if (queued_responses.length === 0) {
+        queued_responses = responses.slice();
+        shuffle(queued_responses);
+    }
+    let response = queued_responses.pop();
     add_message("bot", response);
     ready_for_input = true;
 }
