@@ -60,7 +60,7 @@ body {
 }
 
 #messages:empty:before {
-    content: "Ik weet alles. Wat moet je van me?";
+    content: "Ik\0000a0weet\0000a0alles. Wat\0000a0moet\0000a0je\0000a0van\0000a0me?";
     justify-self: center;
     align-self: center;
     font-size: 2em;
