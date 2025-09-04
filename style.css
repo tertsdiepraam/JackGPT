@@ -60,9 +60,7 @@ body {
 }
 
 #messages:empty:before {
-    /* content: "Ik\0000a0weet\0000a0alles. Wat\0000a0moet\0000a0je\0000a0van\0000a0me?"; */
-    /* content: "Vraag alles aan me en ik geef je een antwoord dat je in de mainstream linkse media weer niet hoort."; */
-    content: "Vraag me alles wat de mainstream linkse media je niet vertelt.";
+    content: "Vraag dan, linkse hond.";
     justify-self: center;
     align-self: center;
     font-size: 2em;
